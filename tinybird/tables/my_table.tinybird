@@ -1,0 +1,19 @@
+---
+type: table
+name: my_table
+---
+
+This is a table.
+
+A table is defined with 4 properties.
+| Name | Type | Expression | Description |
+
+By default, they are delimited by pipes (|). The delimiter is configurable.
+
+This pretty much means the table block can be parsed as a CSV with a custom delimiter.
+
+{% table name="my_table" delimiter="|" %}
+id|UUID|$.id|User ID
+name|String|$.name|Person's full name
+age|UInt8|$.age|Person's age
+{% endtable %}

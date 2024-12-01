@@ -1,0 +1,22 @@
+---
+type: table
+name: my_table
+connection:
+    type: kafka
+    name: my_kafka
+    config:
+        topic: my_topic
+        consumer_group: my_consumer_group
+---
+
+This is a table that uses a  connection.
+
+Connections are defined in the frontmatter under the `connection` key.
+
+Frontmatter is YAML and supported by Markdoc.
+
+{% table name="my_table" delimiter="|" %}
+id|UUID|$.id|User ID
+name|String|$.name|Person's full name
+age|UInt8|$.age|Person's age
+{% endtable %}

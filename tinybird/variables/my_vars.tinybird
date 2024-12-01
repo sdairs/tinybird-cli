@@ -1,0 +1,18 @@
+---
+type: variable
+name: my_vars
+---
+
+This is a variable file. Variables are not sensitive.
+
+Variables are namespaced per file. 
+
+The `name: my_vars` in the file frontmatter namespaces these variables with `my_vars`.
+
+They are referenced in the query using `${vars.my_vars.env}`
+
+They should not be case sensitive.
+
+{% variable my_vars %}
+env: ${environment.ENV}
+{% endvariable %}

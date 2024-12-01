@@ -1,0 +1,10 @@
+---
+type: query
+name: my_query
+---
+
+This query selects all rows from the **my_table** table.
+
+{% query my_query %}
+SELECT * FROM my_table
+{% endquery %}
