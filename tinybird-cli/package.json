@@ -1,7 +1,7 @@
 {
   "name": "@sdairs/tinybird-cli",
   "description": "Experimental CLI for Tinybird",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "sdairs",
   "bin": {
     "tinybird-cli": "./bin/run.js"
