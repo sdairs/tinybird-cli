@@ -1,11 +1,17 @@
-# Tinybird file format proposal
+# Tinybird CLI experiment
 
+## CLI
+1. Built with typescript
+2. Can be invoked without installation using npx
+3. Could be run inside a browser to embed CLI in UI (web terminal)
+
+## File format
 1. Based on Markdoc
 2. Every file ends with `.tinybird` to have one file extension
 3. Folder structure and file names are optional, files are self descriptive
 4. Files are both config AND docs at the same time
 
-## Why Markdoc?
+### Why Markdoc?
 [https://markdoc.dev/](https://markdoc.dev/)
 
 - Markdoc is written in TypeScript. It can run on a user's machine, it could be invoked without installation using npx, it could even run in the browser inside the UI.
@@ -16,7 +22,7 @@
 - Formatting - its just Markdown, so we can use any Markdown formatter with only minor customisation to know how to format our custom tags.
 - AI and LLMs know Markdown/Markdoc/YAML very well.
 
-## Why use one file extensions?
+### Why use one file extensions?
 - Tinybird is unlikely to clash with any other file extension
 - It reinforces our brand name
 - You know immediately it is a Tinybird file
