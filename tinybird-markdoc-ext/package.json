@@ -1,6 +1,6 @@
 {
   "name": "@sdairs/tinybird-markdoc-ext",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Extended Markdoc parser for Tinybird files",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

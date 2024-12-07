@@ -20,7 +20,7 @@ $ npm install -g @sdairs/tinybird-cli
 $ tinybird-cli COMMAND
 running command...
 $ tinybird-cli (--version)
-@sdairs/tinybird-cli/0.1.3 darwin-arm64 node-v22.11.0
+@sdairs/tinybird-cli/0.1.4 darwin-arm64 node-v22.11.0
 $ tinybird-cli --help [COMMAND]
 USAGE
   $ tinybird-cli COMMAND
@@ -68,7 +68,7 @@ EXAMPLES
   $ tinybird-cli auth --dir /path/to/project
 ```
 
-_See code: [src/commands/auth/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.3/src/commands/auth/index.ts)_
+_See code: [src/commands/auth/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.4/src/commands/auth/index.ts)_
 
 ## `tinybird-cli create TYPE NAME`
 
@@ -102,7 +102,7 @@ EXAMPLES
   $ tinybird-cli create datasource my_ds --dir /path/to/project
 ```
 
-_See code: [src/commands/create/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.3/src/commands/create/index.ts)_
+_See code: [src/commands/create/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.4/src/commands/create/index.ts)_
 
 ## `tinybird-cli docs`
 
@@ -124,7 +124,7 @@ EXAMPLES
   $ tinybird-cli docs --dir /path/to/tinybird
 ```
 
-_See code: [src/commands/docs/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.3/src/commands/docs/index.ts)_
+_See code: [src/commands/docs/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.4/src/commands/docs/index.ts)_
 
 ## `tinybird-cli help [COMMAND]`
 
@@ -166,7 +166,7 @@ EXAMPLES
   $ tinybird-cli init --dir my-project
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.3/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/sdairs/tinybird-cli/blob/v0.1.4/src/commands/init/index.ts)_
 
 ## `tinybird-cli plugins`
 

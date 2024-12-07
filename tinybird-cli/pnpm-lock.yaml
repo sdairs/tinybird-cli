@@ -21,8 +21,8 @@ importers:
         specifier: ^5.4.20
         version: 5.4.21
       '@sdairs/tinybird-markdoc-ext':
-        specifier: ^0.1.4
-        version: 0.1.4(@types/react@18.3.14)
+        specifier: ^0.1.5
+        version: 0.1.5(@types/react@18.3.14)
       '@types/express':
         specifier: ^4.17.21
         version: 4.17.21
@@ -509,8 +509,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@sdairs/tinybird-markdoc-ext@0.1.4':
-    resolution: {integrity: sha512-APEWQFTSIFhEAexVwd3NITDFtFPXftX0RZeRcdWvwv6FMCjxKokaX57XhT8tDeZFp4gV9HBOc9WVy+cWkjQL8g==}
+  '@sdairs/tinybird-markdoc-ext@0.1.5':
+    resolution: {integrity: sha512-MDXwmrNYXO7xbu/If8XN3GmZCjgosCSRch96GfNNYulPwC7h9pJ19Be24HL+YDwtcfrkYLWXHyp8nYY30A4XIw==}
 
   '@sindresorhus/is@5.6.0':
     resolution: {integrity: sha512-TV7t8GKYaJWsn00tFDqBw8+Uqmr8A0fRU1tvTQhyZzGv0sJCGRQL3JGMI3ucuKo3XIZdUP+Lx7/gh2t3lewy7g==}
@@ -3758,7 +3758,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@sdairs/tinybird-markdoc-ext@0.1.4(@types/react@18.3.14)':
+  '@sdairs/tinybird-markdoc-ext@0.1.5(@types/react@18.3.14)':
     dependencies:
       '@markdoc/markdoc': 0.4.0(@types/react@18.3.14)
       yaml: 2.6.1
