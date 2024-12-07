@@ -2,25 +2,25 @@ import { Args, Command, Flags } from '@oclif/core'
 import * as fs from 'fs'
 import * as path from 'path'
 
-type ResourceType = 'table' | 'query' | 'connection' | 'secret' | 'variable'
+type ResourceType = 'datasource' | 'query' | 'connection' | 'secret' | 'variable'
 
 export default class Create extends Command {
   static description = 'Create a new Tinybird resource file'
 
   static examples = [
-    '<%= config.bin %> create table my_table',
+    '<%= config.bin %> create datasource my_ds',
     '<%= config.bin %> create query my_query',
     '<%= config.bin %> create connection my_kafka',
     '<%= config.bin %> create secret my_secret',
     '<%= config.bin %> create variable my_var',
-    '<%= config.bin %> create table my_table --dir /path/to/project',
+    '<%= config.bin %> create datasource my_ds --dir /path/to/project',
   ]
 
   static args = {
     type: Args.string({
       description: 'Type of resource to create',
       required: true,
-      options: ['table', 'query', 'connection', 'secret', 'variable'],
+      options: ['datasource', 'query', 'connection', 'secret', 'variable'],
     }),
     name: Args.string({
       description: 'Name of the resource',
@@ -38,8 +38,8 @@ export default class Create extends Command {
 
   private getTemplateContent(type: ResourceType, name: string): string {
     const templates: Record<ResourceType, string> = {
-      table: `---
-type: table
+      datasource: `---
+type: datasource
 name: ${name}
 ---
 
@@ -89,7 +89,7 @@ key: value
 
   private getResourceDir(type: ResourceType): string {
     const dirMap: Record<ResourceType, string> = {
-      table: 'tables',
+      datasource: 'datasources',
       query: 'queries',
       connection: 'connections',
       secret: 'secrets',
