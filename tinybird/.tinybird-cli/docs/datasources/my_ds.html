@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>my_table - Tinybird Docs</title>
+          <title>my_ds - Tinybird Docs</title>
           <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
@@ -25,17 +25,17 @@
               <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
               
                 <span class="text-gray-400">/</span>
-                <span class="text-gray-600">tables</span>
+                <span class="text-gray-600">datasources</span>
               
               <span class="text-gray-400">/</span>
-              <span class="text-gray-600">my_table</span>
+              <span class="text-gray-600">my_ds</span>
             </nav>
             <main>
               <div class="flex items-center justify-between mb-8">
-                <h1 class="text-4xl font-bold">my_table</h1>
+                <h1 class="text-4xl font-bold">my_ds</h1>
                 
                   <span class="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
-                    table
+                    datasource
                   </span>
                 
               </div>
@@ -44,25 +44,16 @@
           <dl class="grid grid-cols-2 gap-2">
             
               <dt class="font-medium text-gray-600">type</dt>
-              <dd>"table"</dd>
+              <dd>"datasource"</dd>
             
               <dt class="font-medium text-gray-600">name</dt>
-              <dd>"my_table"</dd>
-            
-              <dt class="font-medium text-gray-600">connection</dt>
-              <dd>{
-  "type": "kafka",
-  "name": "my_kafka",
-  "config": {
-    "topic": "my_topic",
-    "consumer_group": "my_consumer_group"
-  }
-}</dd>
+              <dd>"my_ds"</dd>
             
           </dl>
         </div>
               <div class="prose max-w-none">
-                <article><p>This is a table that uses a  connection.</p><p>Connections are defined in the frontmatter under the <code>connection</code> key.</p><p>Frontmatter is YAML and supported by Markdoc.</p><div name="my_table" delimiter="|" columns="[object Object]"></div></article>
+                <article><p>This is a datasource.</p><p>A datasource is defined with 4 properties.</p><pre>| Name | Type | Expression | Description |
+</pre><p>By default, they are delimited by pipes (|). The delimiter is configurable.</p><p>This pretty much means the table block can be parsed as a CSV with a custom delimiter.</p><div class="datasource-container" name="my_ds" delimiter="|"><table class="datasource-table"><thead><tr><th>Name</th><th>Type</th><th>Path</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>UUID</td><td>$.id</td><td>User ID</td></tr><tr><td>name</td><td>String</td><td>$.name</td><td>Person's full name</td></tr><tr><td>age</td><td>UInt8</td><td>$.age</td><td>Person's age</td></tr></tbody></table></div></article>
               </div>
             </main>
           </div>

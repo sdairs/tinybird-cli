@@ -1,4 +1,4 @@
-import {Args, Command, Flags} from '@oclif/core'
+import { Args, Command, Flags } from '@oclif/core'
 import * as fs from 'fs'
 import * as path from 'path'
 
@@ -43,44 +43,44 @@ type: table
 name: ${name}
 ---
 
-{% table name="${name}" delimiter="|" %}
+{% datasource name="${name}" delimiter="|" %}
 column|type|expression|description
-{% endtable %}
+{% /datasource %}
 `,
       query: `---
 type: query
 name: ${name}
 ---
 
-{% query ${name} %}
+{% query name="${name}" %}
 SELECT * FROM table_name
-{% endquery %}
+{% /query %}
 `,
       connection: `---
 type: connection
 name: ${name}
 ---
-{% connection ${name} %}
+{% connection name="${name}" %}
 type: kafka
 host: localhost
 port: 9092
-{% endconnection %}
+{% /connection %}
 `,
       secret: `---
 type: secret
 name: ${name}
 ---
-{% secret ${name} %}
+{% secret name="${name}" %}
 key: value
-{% endsecret %}
+{% /secret %}
 `,
       variable: `---
 type: variable
 name: ${name}
 ---
-{% variable ${name} %}
+{% variable name="${name}" %}
 key: value
-{% endvariable %}
+{% /variable %}
 `,
     }
 
@@ -100,7 +100,7 @@ key: value
 
   private findTinybirdDir(startDir: string): string | null {
     let currentDir = startDir
-    
+
     while (currentDir !== path.parse(currentDir).root) {
       const possibleTinybirdDir = path.join(currentDir, 'tinybird')
       if (fs.existsSync(possibleTinybirdDir)) {
@@ -108,12 +108,12 @@ key: value
       }
       currentDir = path.dirname(currentDir)
     }
-    
+
     return null
   }
 
   async run(): Promise<void> {
-    const {args, flags} = await this.parse(Create)
+    const { args, flags } = await this.parse(Create)
     const type = args.type as ResourceType
     const name = args.name
 

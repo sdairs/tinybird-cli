@@ -1,4 +1,4 @@
-import {Command, Flags} from '@oclif/core'
+import { Command, Flags } from '@oclif/core'
 import * as fs from 'fs'
 import * as path from 'path'
 
@@ -19,24 +19,24 @@ export default class Init extends Command {
   }
 
   async run(): Promise<void> {
-    const {flags} = await this.parse(Init)
-    
+    const { flags } = await this.parse(Init)
+
     // Create base directory with 'tinybird' as the project folder
     const baseDir = path.resolve(process.cwd(), flags.dir, 'tinybird')
-    
+
     // Define project structure
     const directories = [
       'connections',
       'queries',
       'secrets',
-      'tables',
+      'datasources',
       'variables',
     ]
 
     try {
       // Create base tinybird directory if it doesn't exist
       if (!fs.existsSync(baseDir)) {
-        fs.mkdirSync(baseDir, {recursive: true})
+        fs.mkdirSync(baseDir, { recursive: true })
         this.log(`Created tinybird directory: ${baseDir}`)
       }
 

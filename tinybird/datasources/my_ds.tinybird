@@ -1,19 +1,22 @@
 ---
-type: table
-name: my_table
+type: datasource
+name: my_ds
 ---
 
-This is a table.
+This is a datasource.
 
-A table is defined with 4 properties.
-| Name | Type | Expression | Description |
+A datasource is defined with 4 properties.
+
+```
+| Name | Type | JSONPath | Description |
+```
 
 By default, they are delimited by pipes (|). The delimiter is configurable.
 
 This pretty much means the table block can be parsed as a CSV with a custom delimiter.
 
-{% table name="my_table" delimiter="|" %}
+{% datasource name="my_ds" delimiter="|" %}
 id|UUID|$.id|User ID
 name|String|$.name|Person's full name
 age|UInt8|$.age|Person's age
-{% endtable %}
+{% /datasource %}

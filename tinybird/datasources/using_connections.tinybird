@@ -1,6 +1,6 @@
 ---
-type: table
-name: my_table
+type: datasource
+name: my_ds
 connection:
     type: kafka
     name: my_kafka
@@ -9,14 +9,14 @@ connection:
         consumer_group: my_consumer_group
 ---
 
-This is a table that uses a  connection.
+This is a datasource that uses a  connection.
 
 Connections are defined in the frontmatter under the `connection` key.
 
 Frontmatter is YAML and supported by Markdoc.
 
-{% table name="my_table" delimiter="|" %}
-id|UUID|$.id|User ID
-name|String|$.name|Person's full name
-age|UInt8|$.age|Person's age
-{% endtable %}
+{% datasource name="my_ds" delimiter="|" %}
+id_two|UUID|$.id|User ID
+name_two|String|$.name|Person's full name
+age_two|UInt8|$.age|Person's age
+{% /datasource %}

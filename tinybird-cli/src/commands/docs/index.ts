@@ -84,7 +84,6 @@ export default class Docs extends Command {
       
       // Parse the file
       const { frontmatter, content: tree } = this.parser.parseFile(content)
-      console.log(frontmatter)
       const html = this.parser.renderHtml(content)
       
       // Add to sections

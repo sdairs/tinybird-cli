@@ -13,6 +13,6 @@ They are referenced in the query using `${vars.my_vars.env}`
 
 They should not be case sensitive.
 
-{% variable my_vars %}
+{% variable name="my_vars" %}
 env: ${environment.ENV}
-{% endvariable %}
+{% /variable %}
