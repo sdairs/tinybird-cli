@@ -25,9 +25,9 @@ name: my_query
 
 This is a query that selects data.
 
-{% query my_query %}
+{% query name="my_query" %}
 SELECT * FROM my_table
-{% endquery %}
+{% /query %}
 `
 
 // Get both frontmatter and content
@@ -44,9 +44,9 @@ const html = parser.renderHtml(content)
 The query node allows you to define SQL queries in your Tinybird files:
 
 ```markdown
-{% query my_query %}
+{% query name="my_query" %}
 SELECT * FROM my_table
-{% endquery %}
+{% /query %}
 ```
 
 ### Table Node
@@ -54,11 +54,11 @@ SELECT * FROM my_table
 The table node allows you to define table schemas:
 
 ```markdown
-{% table name="my_table" delimiter="|" %}
+{% datasource name="my_table" delimiter="|" %}
 id|UUID|$.id|User ID
 name|String|$.name|Person's full name
 age|UInt8|$.age|Person's age
-{% endtable %}
+{% /datasource %}
 ```
 
 ## Extending
